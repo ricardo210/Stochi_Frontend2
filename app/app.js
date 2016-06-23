@@ -14,7 +14,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 	.state('perfil', {
 		url: '/perfil',
 		templateUrl: '/views/perfil.html',
-		controller: 'productosController'
+		controller: 'loginController'
 	})
 	.state('productos', {
 		url: '/productos',
