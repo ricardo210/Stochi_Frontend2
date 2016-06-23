@@ -1,4 +1,4 @@
-angular.module('Stochi.Services').factory('productoService', ['$http',
+angular.module('Stochi.Services').factory('productosService', ['$http',
 	function($http){
 		$http.defaults.withCredentials = true;
 		var baseUrl = 'https://stochi-b.herokuapp.com/';
@@ -12,7 +12,7 @@ angular.module('Stochi.Services').factory('productoService', ['$http',
 				Deleteproducto: function(payload,id){
 					return $http.delete(baseUrl + "v1/productd/" + id,payload);
 				},
-				Deleteproducto: function(payload,id){
+		  	Updateproducto: function(payload,id){
 					return $http.delete(baseUrl + "v1/productu/" + id,payload);
 				}
 	    };
