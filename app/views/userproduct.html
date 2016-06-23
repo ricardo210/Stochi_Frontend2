@@ -1,0 +1,37 @@
+<div ng-controller="productController" ng-class="viewBackground">
+  <div id="bodyproducto">
+    <div class="container" ng-init="loadproducto()">
+      <div id="dived">
+        <div class="row">
+
+          <div class="row"><br></div>
+          <div class="row"><br></div>
+
+          <!-- LISTAR -->
+          <div class="row" >
+            <div class="col-xs-12">
+              <table class="table table-bordered">
+                <thead>
+                  <th>Nombre</th>
+                  <th>Descripcion</th>
+                  <th>informacion de contacto</th>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="producto in productoArreglo |filter: {properties:{username:$sessionStorage.currentUser.username}}:true">
+                    <td class="TableCenter">{{product.name}}</td>
+                    <td class="TableCenter">{{product.description}}</td>
+                    <td class="TableCenter">{{product.contact}}</td>
+                    <th><button class="btn btn-primary pull-right" type="button" ng-click="deleteProducto(Producto)">Borrar Producto</button></th>
+                    <th><button class="btn btn-primary pull-right" type="button" ng-click="changeStateM()">Modificar Producto</button></th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- FIN LISTAR -->
+        </div>
+        <div class="row"></div>
+      </div>
+    </div>
+  </div>
+</div>

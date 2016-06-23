@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Stochi! Deje de Buscar</title>
+  <meta name="generator" content="Bootply" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body ng-app="Stochi">
+  <div class="row row-offcanvas row-offcanvas-left">
+
+    <!-- main right col -->
+    <div class="column col-sm-12 col-xs-12" id="main">
+      <!-- top nav -->
+      <div class="navbar navbar-blue navbar-static-top"  ng-controller="loginController" >
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="navbar-brand logo"><img src="/images/logo.png" width="25px" height="25"></a>
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation">
+          <form class="navbar-form navbar-right">
+            <div class="form-group" ng-show="!$sessionStorage.currentUser">
+              <input type="text" class=" column col-sm-4 col-xs-4 row" placeholder="username" ng-model="user.username">
+              <input type="password" class="column col-sm-4 col-xs-4 row" placeholder="password" ng-model="user.password">
+              <button type="submit" class="btn btn-default" ng-click="login(user)">Log in</button>
+            </div>
+            <ul class="nav navbar-nav">
+              <li>
+                <a ng-click="changeState()"><i class="glyphicon glyphicon-home"></i> Inicio</a>
+              </li>
+            </nav>
+            <div class="row" ng-show="$sessionStorage.currentUser">
+              <button id="usuario_name" ng-click="changeState()" >{{$sessionStorage.currentUser.username}}</button>  <button type="submit" class="btn btn-default" ng-click="logout()">Log out</button>
+
+            </div>
+          </form>
+        </nav>
+      </div>
+
+      <div class="container">
+        <div ui-view></div>
+      </div>
+    </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+</body>
+<script src="/angular/angular.js"></script>
+
+<script src="/angular-ui-router/release/angular-ui-router.js"></script>
+
+<script src="/ngstorage/ngStorage.js"></script>
+
+<!-- endinject -->
+
+<script src="app.js"></script>
+
+<!-- inject:js -->
+<script src="scripts/controllers/loginController.js"></script>
+<script src="scripts/controllers/productosController.js"></script>
+<script src="scripts/services/authService.js"></script>
+</html>
