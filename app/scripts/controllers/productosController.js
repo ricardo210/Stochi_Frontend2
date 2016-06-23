@@ -38,10 +38,10 @@ angular.module('Stochi.Controllers')
      });
 
    }
-  $scope.changeStateM()=function(){
+  $scope.changeStateM=function(){
       $state.go('update');
   }
-  $scope.changeStateU()=function(){
+  $scope.changeStateU=function(){
       $state.go('perfil');
   }
 
