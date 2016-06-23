@@ -35,11 +35,11 @@
             </div>
             <ul class="nav navbar-nav">
               <li>
-                <a ng-click="changeState()"><i class="glyphicon glyphicon-home"></i> Inicio</a>
+                <a ng-click="changeStateI()"><i class="glyphicon glyphicon-home"></i> Inicio</a>
               </li>
             </nav>
             <div class="row" ng-show="$sessionStorage.currentUser">
-              <button id="usuario_name" ng-click="changeState()" >{{$sessionStorage.currentUser.username}}</button>  <button type="submit" class="btn btn-default" ng-click="logout()">Log out</button>
+              <button id="usuario_name" ng-click="changeStateI()" >{{$sessionStorage.currentUser.username}}</button>  <button type="submit" class="btn btn-default" ng-click="logout()">Log out</button>
 
             </div>
           </form>

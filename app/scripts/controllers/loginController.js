@@ -46,7 +46,7 @@ angular.module('Stochi.Controllers')
         });
       }
 
-      $scope.changeState()=function(){
+      $scope.changeStateI()=function(){
           $state.go('index');
       }
       $scope.changeStateU()=function(){
