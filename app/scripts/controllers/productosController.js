@@ -14,7 +14,6 @@ angular.module('Stochi.Controllers')
     }
 
     $scope.addProducto =  function(){
-      $scope.producto.username=$sessionStorage.currentUser.username;
       productosService.Postproducto($scope.producto).then(function(response){
       }).catch(function(err){
         alert("No se puede leer el inventario de productos creados");
