@@ -1,5 +1,5 @@
 angular.module('Stochi.Controllers')
-  .controller('productosController', ['productosService', '$scope','$state', '$rootScope', '$sessionStorage',  function (productoService, $scope, $state, $rootScope, $sessionStorage) {
+  .controller('productosController', ['productosService', '$scope','$state', '$rootScope', '$sessionStorage',  function (productosService, $scope, $state, $rootScope, $sessionStorage) {
 
     $scope.productoArreglo = [];
       $scope.producto={};
